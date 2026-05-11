@@ -71,6 +71,36 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; }
 
+/* ---------- Focus indicators (WCAG 2.4.7) ---------- */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.btn-link:focus-visible {
+  outline: 2px solid var(--copper-600);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+.surface-dark a:focus-visible,
+.surface-dark button:focus-visible,
+.cta-band a:focus-visible,
+.footer a:focus-visible { outline-color: var(--cream-50); }
+
+/* ---------- Skip link (WCAG 2.4.1) ---------- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 100;
+  background: var(--navy-900);
+  color: var(--cream-50);
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: top 150ms ease;
+}
+.skip-link:focus { top: 12px; outline: 2px solid var(--copper-500); outline-offset: 2px; }
+
 /* ---------- Typography ---------- */
 .font-display { font-family: var(--font-display); font-optical-sizing: auto; }
 .eyebrow {
@@ -204,7 +234,7 @@ section { padding: clamp(72px, 9vw, 128px) 0; }
 .hero-grid { display: grid; grid-template-columns: 1fr; gap: 56px; align-items: end; }
 @media (min-width: 1000px) { .hero-grid { grid-template-columns: 1.15fr 1fr; gap: 80px; } }
 .hero h1 { margin-bottom: 28px; }
-.hero h1 em { font-style: italic; font-weight: 400; color: var(--copper-600); font-feature-settings: "ss01"; }
+.hero h1 em { font-style: italic; font-weight: 400; color: var(--copper-700); font-feature-settings: "ss01"; }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 32px 48px; margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--rule); }
 .hero-meta-item { font-size: 13px; color: var(--text-mute); max-width: 220px; }
 .hero-meta-item strong { display: block; font-family: var(--font-display); font-size: 2rem; font-weight: 500; color: var(--navy-900); letter-spacing: -0.02em; line-height: 1; margin-bottom: 6px; }
@@ -361,9 +391,9 @@ section { padding: clamp(72px, 9vw, 128px) 0; }
   transition: border-color 150ms ease, box-shadow 150ms ease;
 }
 .field input:focus, .field select:focus, .field textarea:focus {
-  outline: none;
+  outline: 2px solid var(--copper-600);
+  outline-offset: 1px;
   border-color: var(--navy-900);
-  box-shadow: 0 0 0 4px rgba(10,26,47,0.06);
 }
 .field textarea { min-height: 140px; resize: vertical; }
 
@@ -373,8 +403,7 @@ section { padding: clamp(72px, 9vw, 128px) 0; }
   .reveal.in { opacity: 1; transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; }
-  * { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; transition: none; }
 }
 
 /* ---------- Article (case study body) ---------- */

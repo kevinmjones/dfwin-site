@@ -9,14 +9,20 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Contact | DFWin International — Global Supply Chain">
   <meta property="og:description" content="Tell us what you're sourcing and where it has to land. We'll come back with a plan inside a week.">
-  <meta property="og:image" content="images/global_map_pacific.png">
+  <meta property="og:image" content="https://kevinmjones.github.io/dfwin-site/images/global_map_pacific.png">
+  <meta property="og:url" content="https://kevinmjones.github.io/dfwin-site/contact.html">
   <meta property="og:site_name" content="DFWin International">
+  <meta property="og:locale" content="en_US">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..600,0..100&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.svg" sizes="any">
+  <link rel="canonical" href="https://kevinmjones.github.io/dfwin-site/contact.html">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header class="nav" role="banner">
   <div class="nav-inner">
@@ -42,11 +48,11 @@
     <a href="services.html">Services</a>
     <a href="products.html">Products</a>
     <a href="case-studies.html">Case Studies</a>
-    <a href="contact.html">Talk to us</a>
+    <a href="contact.html" aria-current="page">Talk to us</a>
   </div>
 </header>
 
-<main>
+<main id="main-content">
 
   <!-- ============== HERO ============== -->
   <section class="hero" aria-labelledby="hero-h">
@@ -89,7 +95,10 @@
           <h2 id="form-h" class="mb-3">Send the spec, the pain, and the deadline.</h2>
           <p class="lede mb-4">The more concrete the better. If you have a drawing, a target landed cost, a ship date — say so. We'll read it carefully and come back with questions.</p>
 
-          <form action="mailto:info@dfwin-intl.com" method="post" enctype="text/plain" aria-label="Contact DFWin International">
+          <p class="muted mb-3" style="font-size: 13px; padding: 12px 14px; background: var(--cream-100); border-left: 3px solid var(--copper-500); border-radius: 3px;">
+            <strong style="color: var(--text);">Heads up:</strong> sending this form will open your default email app with the message pre-filled — you'll review and send from there. Prefer email direct? Write to <a href="mailto:info@dfwin-intl.com" style="color: var(--copper-600); text-decoration: underline;">info@dfwin-intl.com</a>.
+          </p>
+          <form action="mailto:info@dfwin-intl.com?subject=DFWin%20enquiry" method="post" enctype="text/plain" aria-label="Contact DFWin International">
             <div class="field">
               <label for="f-name">Your name</label>
               <input id="f-name" type="text" name="Name" required autocomplete="name">
@@ -110,8 +119,7 @@
               <label for="f-project">What are you sourcing, and what's the pain?</label>
               <textarea id="f-project" name="Project" required placeholder="Category, volume, target dates, where it has to land, and what the incumbent isn't doing well."></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-arrow">Send the brief</button>
-            <p class="muted mt-3" style="font-size: 12px;">Submitting opens your email client with the message pre-filled. Prefer to email direct? Write to <a href="mailto:info@dfwin-intl.com" style="color: var(--copper-600); text-decoration: underline;">info@dfwin-intl.com</a>.</p>
+            <button type="submit" class="btn btn-primary btn-arrow">Open email &amp; send</button>
           </form>
         </div>
 
